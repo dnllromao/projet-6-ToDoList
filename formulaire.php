@@ -20,33 +20,9 @@
 				return;
 			}
 
-			// Push user data to array
-			array_push($arr_data,$item);
-			//var_dump($arr_data);
+			addItemToJson($item);
 
-			//Convert updated array to JSON
-			$jsondata = json_encode($arr_data, JSON_PRETTY_PRINT); //Returns the JSON representation of a value
-			//var_dump($jsondata);
-
-			//write json data into data.json file
-		   	if(file_put_contents(FILE, $jsondata)) {
-		    	//echo 'Data successfully saved';
-		    } else {
-		    	//echo "error";
-		    }
-
-		    $afaire = [];
-		    $archive = [];
-
-		    foreach ($arr_data as $key => $value) {
-		    	if($value['active']) {
-		    		$afaire[$key] = $value;
-		    		//array_push($afaire, $value);
-		    	} else {
-		    		$archive[$key] = $value;
-		    		//array_push($archive, $value);
-		    	}
-		    }
+		    prepareDataToDisplay();
 
 			break;
 		
@@ -60,36 +36,12 @@
 				$arr_data[$key]['active'] = false;
 			}
 
-			//Convert updated array to JSON
-			$jsondata = json_encode($arr_data, JSON_PRETTY_PRINT); //Returns the JSON representation of a value
-			//var_dump($jsondata);
+			overWriteJson($arr_data);
 
-			//write json data into data.json file
-		   	if(file_put_contents(FILE, $jsondata)) {
-		    	//echo 'Data successfully saved';
-		    } else {
-		    	//echo "error";
-		    }
-
-		    $afaire = [];
-		    $archive = [];
-
-		    foreach ($arr_data as $key => $value) {
-		    	if($value['active']) {
-		    		$afaire[$key] = $value;
-		    		//array_push($afaire, $value);
-		    	} else {
-		    		$archive[$key] = $value;
-		    		//array_push($archive, $value);
-		    	}
-		    }
+		    prepareDataToDisplay();
 
 			break;
 	}
-
-
-
-	
 
 	function sanitization ($data) {
 
@@ -99,4 +51,26 @@
 		$data = htmlspecialchars($data); 
 
 		return (!empty($data))?$data:'';
+	}
+
+	function addItemToJson($item) {
+		global $arr_data;
+
+		// Push user data to array
+		array_push($arr_data,$item);
+
+		overWriteJson($arr_data);
+
+	}
+
+	function overWriteJson($arr) {
+			//Convert updated array to JSON
+			$jsondata = json_encode($arr, JSON_PRETTY_PRINT); //Returns the JSON representation of a value
+
+			//write json data into data.json file
+		   	if(file_put_contents(FILE, $jsondata)) {
+		    	//echo 'Data successfully saved';
+		    } else {
+		    	//echo "error";
+		    }
 	}

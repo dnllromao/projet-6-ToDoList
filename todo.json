@@ -1,51 +1,11 @@
 [
     {
-        "name": "u",
-        "active": false
-    },
-    {
         "name": "acheter tickets vacances",
-        "active": "done"
-    },
-    {
-        "name": "ui",
         "active": false
-    },
-    {
-        "name": "ui",
-        "active": "done"
-    },
-    {
-        "name": "atchim",
-        "active": "done"
-    },
-    {
-        "name": "gt",
-        "active": "done"
-    },
-    {
-        "name": "jkl",
-        "active": true
-    },
-    {
-        "name": "df",
-        "active": false
-    },
-    {
-        "name": "hjk",
-        "active": false
-    },
-    {
-        "name": "sd",
-        "active": false
-    },
-    {
-        "name": "ghj",
-        "active": true
     },
     {
         "name": "faire des courses",
-        "active": "done"
+        "active": true
     },
     {
         "name": "faire le con",
@@ -56,15 +16,19 @@
         "active": true
     },
     {
-        "name": "refaire le con",
+        "name": "reveiller safia",
+        "active": true
+    },
+    {
+        "name": "appeller mama",
         "active": false
     },
     {
-        "name": "rerefaire le con",
+        "name": "rentrer a la maison",
         "active": false
     },
     {
-        "name": "rererefaire le con",
-        "active": false
+        "name": "etudier js",
+        "active": true
     }
 ]
