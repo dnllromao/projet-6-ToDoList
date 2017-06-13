@@ -1,6 +1,7 @@
 <?php
 	require('contenu.php');
 	require('formulaire.php');
+	echo '<pre>'.print_r($_POST,true).'</pre>';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,20 +12,24 @@
 </head>
 <body>
 	<h1>To Do List</h1>
-	<h2>A faire</h2>
-	<form action="" method="post">
+	<form action="" method="post" id="items-list">
+		<h2>A faire</h2>
+		<div class="block-afaire">
 		<?php
 			foreach ($afaire as $key => $value) { 
-				echo '<label><input type="checkbox" name="'.$key.'">'.$value['name'].'</label></br>';
+				echo '<label><input type="checkbox" name="'.$key.'" value="0">'.$value['name'].'</br></label>';
 			}
 		?>
-		<input type="submit" value="enregistrer" name="action">
+		</div>
+		<!--<input type="submit" value="enregistrer" name="action">-->
 		<h2>Archive</h2>
+		<div class="block-archive">
 		<?php
 			foreach ($archive as $key => $value) { 
-				echo '<label class="done"><input type="checkbox" name="'.$key.'" checked>'.$value['name'].'</label><br>';
+				echo '<label class="done"><input type="checkbox" name="'.$key.'" value="1" checked>'.$value['name'].'</br></label>';
 			}
 		?>
+		</div>
 	</form>
 	<h3>Ajouter une tâche</h3>
 	<form action="" method="post">
@@ -34,5 +39,6 @@
 			<input type="submit" value="ajouter" name="action">
 		</label>
 	</form>
+	<script src="app.js"></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
+
 	define('FILE','todo.json');
+
 	$afaire;
 	$archive;
 
@@ -20,16 +22,15 @@
 		global $afaire;
 		global $archive;
 		global $arr_data;
+
 		$afaire = [];
 		$archive = [];
 
 		foreach ($arr_data as $key => $value) {
 			if($value['active']) {
 				$afaire[$key] = $value;
-				//array_push($afaire, $value);
 			} else {
 				$archive[$key] = $value;
-				//array_push($archive, $value);
 			}
 		}
 	}

@@ -1,4 +1,5 @@
 <?php
+	
 
 	if(!isset($_POST['action'])) {
 		return;
@@ -30,10 +31,11 @@
 			//echo 'enregistrer';
 
 			foreach ($_POST as $key => $value) {
+				$value = (bool) $value;
 				if($key == 'action')
 					continue;
-
-				$arr_data[$key]['active'] = false;
+				var_dump($value);
+				$arr_data[$key]['active'] = $value;
 			}
 
 			overWriteJson($arr_data);

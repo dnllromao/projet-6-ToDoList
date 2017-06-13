@@ -1,15 +1,15 @@
 [
     {
         "name": "acheter tickets vacances",
-        "active": false
-    },
-    {
-        "name": "faire des courses",
         "active": true
     },
     {
+        "name": "faire des courses",
+        "active": "1"
+    },
+    {
         "name": "faire le con",
-        "active": false
+        "active": true
     },
     {
         "name": "taquiner habib",
@@ -17,11 +17,11 @@
     },
     {
         "name": "reveiller safia",
-        "active": true
+        "active": "1"
     },
     {
         "name": "appeller mama",
-        "active": false
+        "active": "1"
     },
     {
         "name": "rentrer a la maison",
