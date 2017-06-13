@@ -1,7 +1,6 @@
 <?php
 	require('contenu.php');
 	require('formulaire.php');
-	echo '<pre>'.print_r($_POST,true).'</pre>';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

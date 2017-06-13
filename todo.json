@@ -9,7 +9,7 @@
     },
     {
         "name": "faire le con",
-        "active": true
+        "active": false
     },
     {
         "name": "taquiner habib",
@@ -17,7 +17,7 @@
     },
     {
         "name": "reveiller safia",
-        "active": "1"
+        "active": false
     },
     {
         "name": "appeller mama",
@@ -25,10 +25,10 @@
     },
     {
         "name": "rentrer a la maison",
-        "active": false
+        "active": true
     },
     {
         "name": "etudier js",
-        "active": true
+        "active": false
     }
 ]
