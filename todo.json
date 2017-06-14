@@ -4,10 +4,6 @@
         "active": true
     },
     {
-        "name": "faire des courses",
-        "active": "1"
-    },
-    {
         "name": "faire le con",
         "active": false
     },
@@ -20,15 +16,15 @@
         "active": false
     },
     {
-        "name": "appeller mama",
-        "active": "1"
-    },
-    {
         "name": "rentrer a la maison",
         "active": true
     },
     {
         "name": "etudier js",
+        "active": false
+    },
+    {
+        "name": "apprender a sourire",
         "active": false
     }
 ]

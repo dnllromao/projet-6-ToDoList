@@ -16,7 +16,7 @@
 		<div class="block-afaire">
 		<?php
 			foreach ($afaire as $key => $value) { 
-				echo '<label><input type="checkbox" name="'.$key.'" value="0">'.$value['name'].'</br></label>';
+				echo '<label draggable="true"><input type="checkbox" name="'.$key.'" value="0">'.$value['name'].'</br></label>';
 			}
 		?>
 		</div>
@@ -39,5 +39,6 @@
 		</label>
 	</form>
 	<script src="app.js"></script>
+	<script src="drag.js"></script>
 </body>
 </html>
