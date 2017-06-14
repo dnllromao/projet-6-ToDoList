@@ -5,7 +5,7 @@
     },
     {
         "name": "faire le con",
-        "active": false
+        "active": true
     },
     {
         "name": "taquiner habib",
@@ -13,7 +13,7 @@
     },
     {
         "name": "reveiller safia",
-        "active": false
+        "active": true
     },
     {
         "name": "rentrer a la maison",
@@ -21,10 +21,14 @@
     },
     {
         "name": "etudier js",
-        "active": false
+        "active": true
     },
     {
-        "name": "apprender a sourire",
-        "active": false
+        "name": "jouer la capoeira",
+        "active": true
+    },
+    {
+        "name": "laver mon verre",
+        "active": true
     }
 ]
