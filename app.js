@@ -18,38 +18,25 @@ function addChangeEffect (el) {
 			inputBlock.classList.add('done');
 			archive.appendChild(inputBlock);
 
-			//registerChange(index, '0');
-			console.log(0);
-
-			//register 
-			const req = new XMLHttpRequest();
-			req.open('POST', 'index.php');
-			req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-			req.send('action=enregistrer&'+index+'=0');
+			registerChange(index, 0);
 			
 		} else {
 			inputBlock.classList.remove('done');
 			afaire.appendChild(inputBlock);
 
-			//registerChange(index, '1');
-			console.log(1);
-
-			//register 
-			const req = new XMLHttpRequest();
-			req.open('POST', 'index.php');
-			req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-			req.send('action=enregistrer&'+index+'=1');
+			registerChange(index, 1);
 		}
 	});
 }
 
-function registerChange(index, bool) {
-	console.log(index);
-	console.log(bool)
-	//register 
+function registerChange(index, bool) {	
 	const req = new XMLHttpRequest();
 	req.open('POST', 'index.php');
 	req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 	req.send('action=enregistrer&'+index+'='+bool);
+	req.onload = function() {
+		console.log(req.responseText);	
+	}
+
 }
 

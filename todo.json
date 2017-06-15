@@ -1,34 +1,42 @@
 [
     {
         "name": "acheter tickets vacances",
-        "active": true
+        "active": true,
+        "index" : 1
     },
     {
         "name": "faire le con",
-        "active": true
+        "active": false,
+        "index" : 1
     },
     {
         "name": "taquiner habib",
-        "active": true
+        "active": false,
+        "index" : 2
     },
     {
         "name": "reveiller safia",
-        "active": true
+        "active": true,
+        "index" : 2
     },
     {
         "name": "rentrer a la maison",
-        "active": true
+        "active": true,
+        "index" : 3
     },
     {
         "name": "etudier js",
-        "active": true
+        "active": true,
+        "index" : 4
     },
     {
         "name": "jouer la capoeira",
-        "active": true
+        "active": false,
+        "index" : 3
     },
     {
         "name": "laver mon verre",
-        "active": true
+        "active": false,
+        "index" : 4
     }
 ]

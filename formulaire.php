@@ -28,15 +28,18 @@
 			break;
 		
 		case 'enregistrer':
-			echo 'enregistrer';
+			//echo 'enregistrer';
 
 			foreach ($_POST as $key => $value) {
 				$value = (bool) $value;
-				if($key == 'action')
-					continue;
-				var_dump($value);
-				$arr_data[$key]['active'] = $value;
+
+				if( is_int($key)) {
+					$arr_data[$key]['active'] = $value;
+				}
+				
 			}
+
+			//if() create $_POST[var] qui decalche le merge des 2 tableu pour merge ou create function getDone/PasDone
 
 			overWriteJson($arr_data);
 
@@ -71,8 +74,8 @@
 
 			//write json data into data.json file
 		   	if(file_put_contents(FILE, $jsondata)) {
-		    	//echo 'Data successfully saved';
+		    	echo 'Data successfully saved';
 		    } else {
-		    	//echo "error";
+		    	echo "error";
 		    }
 	}

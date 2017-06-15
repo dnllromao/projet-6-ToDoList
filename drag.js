@@ -19,12 +19,34 @@ function dragStartHandler(e) {
 	dragElement = this;
 	e.dataTransfer.effectAllowed = 'move';
 	e.dataTransfer.setData('text/html', this.outerHTML); // save the element in memory
+
+	/* 
+		dataTransfer.effectAllowed
+	Restricts what 'type of drag' the user can perform on the element. 
+	It is used in the drag-and-drop processing model to initialize the dropEffect 
+	during the dragenter and dragover events. 
+	The property can be set to the following values: 
+	none, copy, copyLink, copyMove, link, linkMove, move, all, and uninitialized. 
+
+	*/
+
+
 }
 
 function dragOverHandler(e) {
 	console.log('dragover');
 	this.style.background ='red';
+	e.dataTransfer.dropEffect = 'move';
 	e.preventDefault(); // if i don't do this drop event don't fire ??
+
+	/*
+		dataTransfer.dropEffect
+	Controls the feedback that the user is given during the dragenter and dragover events. 
+	When the user hovers over a target element, the browser's cursor will indicate 
+	what type of operation is going to take place (e.g. a copy, a move, etc.). 
+	The effect can take on one of the following values: none, copy, link, move.
+
+	*/
 }
 
 function dropHandler(e) {
@@ -50,6 +72,8 @@ function dropHandler(e) {
 
 	let sibling = (direction === 1)? this.nextElementSibling : this.previousElementSibling;
 	addDragEffect(sibling);
+	console.log(sibling.querySelector('input'));
+	addChangeEffect(sibling.querySelector('input'));;
 	
 	//e.preventDefault();
 }

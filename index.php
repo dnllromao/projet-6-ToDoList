@@ -15,6 +15,7 @@
 		<h2>A faire</h2>
 		<div class="block-afaire">
 		<?php
+			echo '<pre>'.print_r($afaire, true).'</pre>';
 			foreach ($afaire as $key => $value) { 
 				echo '<label draggable="true"><input type="checkbox" name="'.$key.'" value="0">'.$value['name'].'</br></label>';
 			}
@@ -24,6 +25,7 @@
 		<h2>Archive</h2>
 		<div class="block-archive">
 		<?php
+			echo '<pre>'.print_r($archive, true).'</pre>';
 			foreach ($archive as $key => $value) { 
 				echo '<label class="done"><input type="checkbox" name="'.$key.'" value="1" checked>'.$value['name'].'</br></label>';
 			}
@@ -39,6 +41,6 @@
 		</label>
 	</form>
 	<script src="app.js"></script>
-	<!--<script src="drag.js"></script>-->
+	<script src="drag.js"></script>
 </body>
 </html>
