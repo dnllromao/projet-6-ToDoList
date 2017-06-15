@@ -28,7 +28,7 @@
 			break;
 		
 		case 'enregistrer':
-			//echo 'enregistrer';
+			echo 'enregistrer';
 
 			foreach ($_POST as $key => $value) {
 				$value = (bool) $value;

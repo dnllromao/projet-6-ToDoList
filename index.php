@@ -39,6 +39,6 @@
 		</label>
 	</form>
 	<script src="app.js"></script>
-	<script src="drag.js"></script>
+	<!--<script src="drag.js"></script>-->
 </body>
 </html>

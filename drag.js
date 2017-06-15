@@ -22,12 +22,13 @@ function dragStartHandler(e) {
 }
 
 function dragOverHandler(e) {
+	console.log('dragover');
 	this.style.background ='red';
 	e.preventDefault(); // if i don't do this drop event don't fire ??
 }
 
 function dropHandler(e) {
-
+	console.log('drop');
 	if(this === dragElement)
 		return;
 
